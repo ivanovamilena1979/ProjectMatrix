@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class OperationsWithMatrices {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n, m, n1, m1;
@@ -82,6 +83,7 @@ public class OperationsWithMatrices {
             }
             System.out.println(" ");
         }
+
         System.out.println("The result of subtraction of matrix1 - matrix2 is: ");
         System.out.println();
         subtractTwoMatrices(matrix1, matrix2);
@@ -122,15 +124,13 @@ public class OperationsWithMatrices {
 
             for (int i = 0; i < matrix1.length; i++) {
                 for (int j = 0; j < matrix2[0].length; j++) {
-
                     result[i][j] = matrix1[i][j] + matrix2[i][j];
-
                 }
             }
+
             for (int i = 0; i < result.length; i++) {
                 for (int j = 0; j < result[0].length; j++) {
                     System.out.print(result[i][j] + " ");
-
                 }
                 System.out.println(" ");
             }
@@ -253,7 +253,7 @@ public class OperationsWithMatrices {
     }
 
     public static void checkMatrixBecomesE(double[][] matrix) {
-        if (calculateMatrixDeterminant(matrix) == 1) {
+        if (calculateMatrixDeterminant(matrix) != 0) {
             System.out.println("This matrix can become E!");
         } else {
             System.out.println("This matrix couldn't be transformed to E!");
